@@ -1,0 +1,6 @@
+framework module Pods_WarmHandsTests {
+  umbrella header "Pods-WarmHandsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
