@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import AFNetworking
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Test bridge
+        let test = TestObj()
+        test.test()
+        
+        // Test bridge from pod
+        _ = AFURLSessionManager()
     }
 
     override func didReceiveMemoryWarning() {
