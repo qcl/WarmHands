@@ -1,4 +1,4 @@
-Warm Hands [![Build Status](https://travis-ci.org/qcl/WarmHands.svg?branch=develop)](https://travis-ci.org/qcl/WarmHands)
+Warm Hands [![Build Status](https://travis-ci.org/qcl/WarmHands.svg?branch=develop)](https://travis-ci.org/qcl/WarmHands) [![codecov.io](https://codecov.io/github/qcl/WarmHands/coverage.svg?branch=develop)](https://codecov.io/github/qcl/WarmHands?branch=develop)
 ---
 Warm hands, warm heart.
 
