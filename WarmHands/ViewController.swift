@@ -21,6 +21,15 @@ class ViewController: UIViewController {
         
         // Test bridge from pod
         _ = AFURLSessionManager()
+
+        // Test dispatch
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+            var counter = 1
+            while counter < 999999999999999 {
+                print(counter)
+                counter++
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
