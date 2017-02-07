@@ -11,6 +11,8 @@ import AFNetworking
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var counterLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,13 +25,15 @@ class ViewController: UIViewController {
         _ = AFURLSessionManager()
 
         // Test dispatch
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
-            var counter = 1
-            while counter < 999999999999999 {
-                print(counter)
-                counter++
-            }
-        }
+//        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async { () -> Void in
+//            var counter = 1
+//            while counter < 999999 {
+//                print(counter)
+//                counter += 1
+////                self.counterLabel.text = "counter \(counter)"
+//                self.updateCounterLabel(counter)
+//            }
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +41,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        for i in 1...999999 {
+            print("\(i)")
+            self.updateCounterLabel(i)
+        }
+    }
+
+    func updateCounterLabel(_ count: Int) {
+        print("count = \(count)")
+        let c = count + 0
+        //let str = "count \(count)"
+        self.counterLabel.text = "\(c)"
+    }
 
 }
 
